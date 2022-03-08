@@ -1,0 +1,33 @@
+version: '3.9'
+services:
+  app:
+    # コンテナ名を指定
+    container_name: app
+    # イメージを指定
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # 再起動設定
+    restart: always
+    # ボリュームバインド
+    volumes:
+      - ./app:/app
+    # 起動時のカレントディレクトリ
+    working_dir: /app
+    # 起動時に実行するコマンド
+    command: node
+    # コンテナを起動させ続ける設定
+    tty: true
+    # 環境変数を定義
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    # 使用するポート番号
+    ports:
+      - 3000:3000
+      - 6006:6006
+    # 使用するネットワーク
+    networks:
+      - container-link
+
+networks:
+  container-link:
