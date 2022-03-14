@@ -24,6 +24,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   ignorePatterns: ['.eslintrc.js'],
   rules: {
+    "react/prop-types": "off",
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
     'import/prefer-default-export': 'off',

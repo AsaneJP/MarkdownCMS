@@ -5,10 +5,10 @@ import { Layout } from './components/templates/Layout'
 
 const App: VFC = () => (
   <RecoilRoot>
-      <BrowserRouter>
-        <Layout />
-      </BrowserRouter>
-    </RecoilRoot>
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
+  </RecoilRoot>
 )
 
 export default App
