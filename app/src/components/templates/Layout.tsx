@@ -24,7 +24,7 @@ export const Layout: VFC<Props> = (props) => {
             flexGrow: 1,
             height: '100vh',
             overflow: 'auto',
-            paddingTop: '64px'
+            paddingTop: '64px',
           }}
         >
           {children}

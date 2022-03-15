@@ -3,7 +3,7 @@ import { TableHead, TableRow } from '@mui/material'
 import { TableCheckBox } from '../../atom/Table/TableCheckBox'
 import { TableHeadCell } from '../../atom/Table/TableHeadCell'
 
-export const TableHeader: VFC = memo(() => (
+export const ArticleTableHead: VFC = memo(() => (
   <TableHead>
     <TableRow>
       <TableCheckBox />

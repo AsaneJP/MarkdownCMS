@@ -9,11 +9,18 @@ type Props = {
 
 export const TableHeadCell: VFC<Props> = memo((props) => {
   const { padding, children, align } = props
+
+  if (align === 'center') {
+    return (
+      <TableCell padding={padding} align={align}>
+        <TableSortLabel sx={{ transform: 'translateX(9px)' }}>{children}</TableSortLabel>
+      </TableCell>
+    )
+  }
+
   return (
     <TableCell padding={padding} align={align}>
-      <TableSortLabel sx={{ transform: 'translateX(9px)' }}>
-        {children}
-      </TableSortLabel>
+      <TableSortLabel>{children}</TableSortLabel>
     </TableCell>
   )
 })
