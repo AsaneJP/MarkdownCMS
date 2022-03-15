@@ -32,7 +32,12 @@ const AppBar = styled(MuiAppBar, {
   }),
 }))
 
-export const AppBarContent: VFC = () => {
+type Props = {
+  title: string
+}
+
+export const AppBarContent: VFC<Props> = (props) => {
+  const { title } = props
   const [open, setOpen] = useRecoilState(menuOpneState)
   const [modeConfig, setModeConfig] = useRecoilState(modeConfigState)
   const toggleDrawer = () => {
@@ -63,10 +68,23 @@ export const AppBarContent: VFC = () => {
           <MenuIcon />
         </IconButton>
         <Typography component="h1" variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-          Dashboard
+          {title}
         </Typography>
-        <IconButton color="inherit" onClick={onClickMode}>
-          {modeConfig ? <DarkModeIcon /> : <LightModeIcon />}
+        <IconButton
+          color="inherit"
+          onClick={onClickMode}
+          sx={{
+            border: 'solid 1px',
+            borderRadius: '10px',
+            width: '35px',
+            height: '35px',
+          }}
+        >
+          {modeConfig ? (
+            <DarkModeIcon sx={{ width: '20px', height: '20px' }} />
+          ) : (
+            <LightModeIcon sx={{ width: '20px', height: '20px' }} />
+          )}
         </IconButton>
       </Toolbar>
     </AppBar>

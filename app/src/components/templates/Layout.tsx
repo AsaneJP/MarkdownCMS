@@ -5,16 +5,17 @@ import { SideNav } from '../organisms/SideNav'
 import { AppBarContent } from '../organisms/AppBarContent'
 
 type Props = {
+  title: string
   children: ReactElement
 }
 
 export const Layout: VFC<Props> = (props) => {
-  const { children } = props
+  const { children, title } = props
 
   return (
     <Theme>
       <Box sx={{ display: 'flex' }}>
-        <AppBarContent />
+        <AppBarContent title={title} />
         <SideNav />
         <Box
           component="main"

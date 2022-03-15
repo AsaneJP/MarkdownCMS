@@ -11,9 +11,9 @@ export const NavItemList = () => (
   <List>
     <ListContent icon={<HomeIcon />} name="Home" url="/" />
     <ListContent icon={<ArticleIcon />} name="Article" url="/article" />
-    <ListContent icon={<MailIcon />} name="Mail" url="/" />
-    <ListContent icon={<LeaderboardIcon />} name="Report" url="/" />
-    <ListContent icon={<PersonIcon />} name="User" url="/" />
-    <ListContent icon={<SettingsIcon />} name="Settings" url="/" />
+    <ListContent icon={<MailIcon />} name="Mail" url="/mail" />
+    <ListContent icon={<LeaderboardIcon />} name="Report" url="/report" />
+    <ListContent icon={<PersonIcon />} name="User" url="/user" />
+    <ListContent icon={<SettingsIcon />} name="Settings" url="/setting" />
   </List>
 )
