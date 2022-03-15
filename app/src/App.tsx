@@ -1,12 +1,12 @@
 import { VFC } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { RecoilRoot } from 'recoil'
-import { Layout } from './components/templates/Layout'
+import { Router } from './router/Router'
 
 const App: VFC = () => (
   <RecoilRoot>
     <BrowserRouter>
-      <Layout />
+      <Router />
     </BrowserRouter>
   </RecoilRoot>
 )

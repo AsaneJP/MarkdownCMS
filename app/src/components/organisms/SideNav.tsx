@@ -4,7 +4,7 @@ import { useRecoilState } from 'recoil'
 import MuiDrawer from '@mui/material/Drawer'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import { menuOpneState } from '../../globalState/menuOpen'
-import { NavItemList } from '../molecules/NavItemList'
+import { NavItemList } from '../molecules/List/NavItemList'
 
 const drawerWidth = 240
 
