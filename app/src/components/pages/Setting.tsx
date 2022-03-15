@@ -1,3 +1,1 @@
-export const Setting = () => (
-  <p>Setting</p>
-)
+export const Setting = () => <p>Setting</p>

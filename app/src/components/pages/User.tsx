@@ -1,3 +1,1 @@
-export const User = () => (
-  <p>User</p>
-)
+export const User = () => <p>User</p>

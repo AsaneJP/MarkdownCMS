@@ -1,3 +1,1 @@
-export const Report = () => (
-  <p>Report</p>
-)
+export const Report = () => <p>Report</p>

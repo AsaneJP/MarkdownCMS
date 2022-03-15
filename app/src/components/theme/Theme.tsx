@@ -1,6 +1,6 @@
 import { ReactElement, useEffect, useMemo, VFC } from 'react'
 import { useRecoilState } from 'recoil'
-import { createTheme, ThemeProvider, useMediaQuery } from '@mui/material'
+import { createTheme, CssBaseline, ThemeProvider, useMediaQuery } from '@mui/material'
 import { modeConfigState } from '../../globalState/modeConfig'
 
 type Props = {
@@ -27,5 +27,10 @@ export const Theme: VFC<Props> = (props) => {
     [modeConfig]
   )
 
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {children}
+    </ThemeProvider>
+  )
 }
